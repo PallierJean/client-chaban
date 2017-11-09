@@ -27,7 +27,7 @@ class SinglePage extends React.Component{
     fetch('http://localhost:3000/'+id)
     .then(this.handleErrors)
     .then(res => res.json())
-    .then(res => this.setState({ info: res, isLoading:false }))
+    .then(res => this.setState({ info: res.item, isLoading:false }))
     .catch(function(error) {
         console.log(error);
     });
